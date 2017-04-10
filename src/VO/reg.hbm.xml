@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.reg_vo" table="reg">
+      <id name="id" type="int" column="Reg_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="name" column="Name" type="string"/>
+      <property name="add" column="Address" type="string"/>
+      <property name="city" column="City" type="string"/>
+      <property name="state" column="State" type="string"/>
+      <property name="country" column="Country" type="string"/>
+      <property name="dob" column="DOB" type="date"/>
+      <property name="gender" column="Gender" type="string"/>
+      <property name="qualification" column="Qualification" type="string"/>
+      <property name="email" column="Email" type="string"/>
+      <property name="phn" column="Phn" type="double"/>
+   </class>
+</hibernate-mapping>

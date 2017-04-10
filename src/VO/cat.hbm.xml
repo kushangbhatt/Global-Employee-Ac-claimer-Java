@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.cat_vo" table="Cat_mst">
+      <id name="id" type="int" column="Cat_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="cat" column="Category" type="string"/>
+      <property name="desc" column="cat_desc" type="string"/>
+      <many-to-one name="ev" class="VO.examtype_vo" column="E_type"></many-to-one>    
+   </class>
+</hibernate-mapping>

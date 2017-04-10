@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.que_vo" table="que_ans_mst">
+      <id name="id" type="int" column="Que_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="que" column="Que" type="string"/>
+      <property name="o1" column="option_1" type="string"/>
+      <property name="o2" column="option_2" type="string"/>
+      <property name="o3" column="option_3" type="string"/>
+      <property name="o4" column="option_4" type="string"/>
+      <property name="ra" column="Right_Answer" type="string"/>
+      <property name="m" column="Marks" type="int"/>
+      <many-to-one name="subv" column="Subcat" class="VO.subcat_vo"></many-to-one>
+   </class>
+</hibernate-mapping>

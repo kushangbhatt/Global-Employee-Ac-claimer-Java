@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.leavedtl_vo" table="leaveDtl">
+      <id name="id" type="int" column="Id">
+         <generator class="increment"/>
+      </id>
+      
+      <many-to-one name="lv" column="Leave_Id" class="VO.leavemst_vo"></many-to-one>
+      <property name="d1" column="From_Date" type="date"></property>
+      <property name="d2" column="To_Date" type="date"></property>
+      <property name="desc" column="Description" type="string"/>
+   </class>
+</hibernate-mapping>

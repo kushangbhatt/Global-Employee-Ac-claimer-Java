@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.emp_dtl_vo" table="U_dtl">
+      <id name="id" type="int" column="Id">
+         <generator class="increment"/>
+      </id>
+      
+      <property name="name" column="U_Name" type="string"/>
+      <property name="add" column="U_Address" type="string"/>
+      <property name="city" column="U_City" type="string"/>
+      <property name="state" column="U_State" type="string"/>
+      <property name="country" column="U_Country" type="string"/>
+      <property name="dob" column="U_DOB" type="date"/>
+      <property name="gender" column="U_Gender" type="string"/>
+      <property name="phn" column="U_Phn" type="long"/>
+      <property name="qualification" column="U_Qualification" type="string"/>
+      <property name="department" column="U_Department" type="string"/>
+      <property name="salary" column="U_Salary" type="int"/>
+	  <many-to-one name="login" class="VO.login_vo" column="U_ID"></many-to-one>     
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.subcat_vo" table="Subcat_dtl">
+      <id name="id" type="int" column="Subcat_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="subcat" column="Subcategory" type="string"/>
+      <property name="desc" column="Subcat_desc" type="string"/>
+      <many-to-one name="ev" class="VO.examtype_vo" column="E_type"></many-to-one>
+      <many-to-one name="c" class="VO.cat_vo" column="cat_id"></many-to-one>
+   </class>
+</hibernate-mapping>

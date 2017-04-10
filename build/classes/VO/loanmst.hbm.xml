@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.loanmst_vo" table="loan">
+      <id name="id" type="int" column="Loan_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="loan_type" column="Loan_Type" type="string"/>
+      <property name="amount" column="Amount_allowed" type="int"/>
+      <property name="rate" column="Rate_Interest" type="int"/>
+      <property name="loan_desc" column="Description" type="string"/>
+   </class>
+</hibernate-mapping>

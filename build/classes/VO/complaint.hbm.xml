@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.complaint_vo" table="complaint_dtl">
+      <id name="id" type="int" column="Id">
+         <generator class="increment"/>
+      </id>
+      <property name="type" column="EMP_type"></property>
+      <many-to-one name="emp" column="Emp_To" class="VO.emp_dtl_vo"></many-to-one>
+      <property name="sub" column="Complain_Subject"></property>
+      <property name="desc" column="Description" type="string"/>
+   </class>
+</hibernate-mapping>

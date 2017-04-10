@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.login_vo" table="login_mst">
+      <id name="u_id" type="int" column="Login_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="uname" column="U_Name" type="string"/>
+      <property name="pass" column="U_Password" type="string"/>
+      <property name="utype" column="U_Type" type="string"/>
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="VO.exam_vo" table="exam">
+      <id name="id" type="int" column="Exam_Id">
+         <generator class="increment"/>
+      </id>
+      <property name="e_name" column="Exam_Name" type="string"/>
+      <property name="e_cat" column="Category" type="string"/>
+      <property name="e_subcat" column="Subcategory" type="string"/>
+      <property name="no_q" column="No_of_Que" type="int"/>
+      <property name="e_duration" column="Duration" type="int"/>
+      <property name="e_desc" column="Description" type="string"/>
+   </class>
+</hibernate-mapping>
